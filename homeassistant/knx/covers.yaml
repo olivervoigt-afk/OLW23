@@ -1,0 +1,222 @@
+# KNX Blinds / Covers Configuration - OLW23
+# Generated from ETS export
+#
+# KNX cover addresses:
+#   move_long_address  = "bew" address (DPT 1.008 - up/down)
+#   stop_address       = "ss" address  (DPT 1.007 - stop/step)
+#
+# In Home Assistant, "moving_up" sends 0 (up) and "moving_down" sends 1 (down)
+# on the move_long_address.
+#
+# travelling_time_down / travelling_time_up (seconds) - set to actual motor time!
+# Default here: 30 seconds - adjust to your actual blind motor travel time.
+
+# ============================================================
+# CENTRAL CONTROLS (all floors at once)
+# ============================================================
+
+- name: "Jalousie Haus Gesamt"
+  move_long_address: "0/1/0"
+  stop_address: "0/1/1"
+
+- name: "Jalousie 1UG Gesamt"
+  move_long_address: "0/1/3"
+  stop_address: "0/1/4"
+
+- name: "Jalousie EG Gesamt"
+  move_long_address: "0/1/6"
+  stop_address: "0/1/7"
+
+- name: "Jalousie OG Gesamt"
+  move_long_address: "0/1/9"
+  stop_address: "0/1/10"
+
+- name: "Vorhaenge 1UG Gesamt"
+  move_long_address: "0/1/12"
+  stop_address: "0/1/13"
+
+- name: "Vorhaenge EG Gesamt"
+  move_long_address: "0/1/15"
+  stop_address: "0/1/16"
+
+- name: "Vorhaenge OG Gesamt"
+  move_long_address: "0/1/18"
+  stop_address: "0/1/19"
+
+- name: "Vorhaenge Haus Gesamt"
+  move_long_address: "0/1/21"
+  stop_address: "0/1/22"
+
+- name: "Markise EG Terrasse"
+  move_long_address: "0/1/30"
+  stop_address: "0/1/31"
+
+# ============================================================
+# 1. UNTERGESCHOSS (1st Basement) - Blinds in 2/6/x
+# TODO: Verify individual blind addresses in ETS
+# ============================================================
+
+- name: "1UG SPA Jalousie"
+  move_long_address: "2/6/0"
+  stop_address: "2/6/1"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "1UG Fitness Jalousie"
+  move_long_address: "2/6/10"
+  stop_address: "2/6/11"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "1UG Kinderzimmer Links Jalousie"
+  move_long_address: "2/6/20"
+  stop_address: "2/6/21"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "1UG Kinderzimmer Links Vorhang"
+  move_long_address: "2/6/22"
+  stop_address: "2/6/23"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "1UG Kinderzimmer Rechts Jalousie"
+  move_long_address: "2/6/30"
+  stop_address: "2/6/31"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "1UG Kinderzimmer Rechts Vorhang"
+  move_long_address: "2/6/32"
+  stop_address: "2/6/33"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+# ============================================================
+# GÄSTEWOHNUNG (Guest Apartment) - Blinds in 3/6/x
+# TODO: Verify individual blind addresses in ETS
+# ============================================================
+
+- name: "Gaeste Schlafen Jalousie"
+  move_long_address: "3/6/0"
+  stop_address: "3/6/1"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "Gaeste Schlafen Vorhang"
+  move_long_address: "3/6/2"
+  stop_address: "3/6/3"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "Gaeste Wohnen Jalousie"
+  move_long_address: "3/6/10"
+  stop_address: "3/6/11"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "Gaeste Wohnen Vorhang"
+  move_long_address: "3/6/12"
+  stop_address: "3/6/13"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+# ============================================================
+# ERDGESCHOSS (Ground Floor) - Blinds in 4/6/x
+# TODO: Verify individual blind addresses in ETS
+# ============================================================
+
+- name: "EG Garderobe Jalousie"
+  move_long_address: "4/6/0"
+  stop_address: "4/6/1"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "EG Buero Jalousie"
+  move_long_address: "4/6/10"
+  stop_address: "4/6/11"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "EG Buero Vorhang"
+  move_long_address: "4/6/12"
+  stop_address: "4/6/13"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "EG Kochen Essen Jalousie"
+  move_long_address: "4/6/20"
+  stop_address: "4/6/21"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "EG Wohnen Jalousie"
+  move_long_address: "4/6/30"
+  stop_address: "4/6/31"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "EG Wohnen Vorhang"
+  move_long_address: "4/6/32"
+  stop_address: "4/6/33"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "EG Back Kitchen Jalousie"
+  move_long_address: "4/6/40"
+  stop_address: "4/6/41"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+# ============================================================
+# OBERGESCHOSS (Upper Floor) - Blinds in 5/6/x
+# TODO: Verify individual blind addresses in ETS
+# ============================================================
+
+- name: "OG Schlafen Jalousie"
+  move_long_address: "5/6/0"
+  stop_address: "5/6/1"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "OG Schlafen Vorhang"
+  move_long_address: "5/6/2"
+  stop_address: "5/6/3"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "OG Buero Jalousie"
+  move_long_address: "5/6/10"
+  stop_address: "5/6/11"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "OG Buero Vorhang"
+  move_long_address: "5/6/12"
+  stop_address: "5/6/13"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "OG Masterbad Jalousie"
+  move_long_address: "5/6/20"
+  stop_address: "5/6/21"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "OG Masterschlafen Jalousie"
+  move_long_address: "5/6/30"
+  stop_address: "5/6/31"
+  travelling_time_down: 30
+  travelling_time_up: 30
+
+- name: "OG Masterschlafen Vorhang"
+  move_long_address: "5/6/32"
+  stop_address: "5/6/33"
+  travelling_time_down: 20
+  travelling_time_up: 20
+
+- name: "OG Schrankraum Jalousie"
+  move_long_address: "5/6/40"
+  stop_address: "5/6/41"
+  travelling_time_down: 30
+  travelling_time_up: 30

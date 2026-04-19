@@ -1,0 +1,233 @@
+# KNX Climate Configuration - OLW23
+# Generated from ETS export
+#
+# Per room climate addresses (X/7/Y offsets):
+#   +0  = Solltemperatur (target temperature set, DPT 9.001)
+#   +1  = Isttemperatur  (current temperature read, DPT 9.001)
+#   +6  = Betriebsmodus  (operating mode set, DPT 20.102)
+#   +7  = Betriebsmodus RM (operating mode feedback, DPT 20.102)
+#   +12 = Feuchtigkeit   (humidity read, DPT 9.007)
+#
+# min_temp / max_temp in °C - adjust to your preferences
+
+# ============================================================
+# 2. UNTERGESCHOSS (2nd Basement) - Climate in 1/7/x
+# ============================================================
+
+- name: "2UG Stiegenhaus Klima"
+  temperature_address: "1/7/1"
+  target_temperature_address: "1/7/0"
+  target_temperature_state_address: "1/7/0"
+  operation_mode_address: "1/7/6"
+  operation_mode_state_address: "1/7/7"
+  min_temp: 16
+  max_temp: 28
+
+- name: "2UG Abstellraum Klima"
+  temperature_address: "1/7/21"
+  target_temperature_address: "1/7/20"
+  target_temperature_state_address: "1/7/20"
+  operation_mode_address: "1/7/26"
+  operation_mode_state_address: "1/7/27"
+  min_temp: 16
+  max_temp: 28
+
+- name: "2UG Skiraum Klima"
+  temperature_address: "1/7/41"
+  target_temperature_address: "1/7/40"
+  target_temperature_state_address: "1/7/40"
+  operation_mode_address: "1/7/46"
+  operation_mode_state_address: "1/7/47"
+  min_temp: 10
+  max_temp: 25
+
+# ============================================================
+# 1. UNTERGESCHOSS (1st Basement) - Climate in 2/7/x
+# TODO: Verify addresses in ETS - pattern: room offset x 14
+# ============================================================
+
+- name: "1UG Stiegenhaus Klima"
+  temperature_address: "2/7/1"
+  target_temperature_address: "2/7/0"
+  target_temperature_state_address: "2/7/0"
+  operation_mode_address: "2/7/6"
+  operation_mode_state_address: "2/7/7"
+  min_temp: 16
+  max_temp: 28
+
+- name: "1UG Vinothek Klima"
+  temperature_address: "2/7/15"
+  target_temperature_address: "2/7/14"
+  target_temperature_state_address: "2/7/14"
+  operation_mode_address: "2/7/20"
+  operation_mode_state_address: "2/7/21"
+  min_temp: 12
+  max_temp: 22
+
+- name: "1UG Kino Klima"
+  temperature_address: "2/7/29"
+  target_temperature_address: "2/7/28"
+  target_temperature_state_address: "2/7/28"
+  operation_mode_address: "2/7/34"
+  operation_mode_state_address: "2/7/35"
+  min_temp: 18
+  max_temp: 26
+
+- name: "1UG Fitness Klima"
+  temperature_address: "2/7/43"
+  target_temperature_address: "2/7/42"
+  target_temperature_state_address: "2/7/42"
+  operation_mode_address: "2/7/48"
+  operation_mode_state_address: "2/7/49"
+  min_temp: 16
+  max_temp: 26
+
+- name: "1UG SPA Klima"
+  temperature_address: "2/7/57"
+  target_temperature_address: "2/7/56"
+  target_temperature_state_address: "2/7/56"
+  operation_mode_address: "2/7/62"
+  operation_mode_state_address: "2/7/63"
+  min_temp: 20
+  max_temp: 30
+
+- name: "1UG Kinderzimmer Links Klima"
+  temperature_address: "2/7/71"
+  target_temperature_address: "2/7/70"
+  target_temperature_state_address: "2/7/70"
+  operation_mode_address: "2/7/76"
+  operation_mode_state_address: "2/7/77"
+  min_temp: 18
+  max_temp: 26
+
+- name: "1UG Kinderzimmer Rechts Klima"
+  temperature_address: "2/7/85"
+  target_temperature_address: "2/7/84"
+  target_temperature_state_address: "2/7/84"
+  operation_mode_address: "2/7/90"
+  operation_mode_state_address: "2/7/91"
+  min_temp: 18
+  max_temp: 26
+
+# ============================================================
+# GÄSTEWOHNUNG (Guest Apartment) - Climate in 3/7/x
+# TODO: Verify addresses in ETS
+# ============================================================
+
+- name: "Gaeste Schlafen Klima"
+  temperature_address: "3/7/1"
+  target_temperature_address: "3/7/0"
+  target_temperature_state_address: "3/7/0"
+  operation_mode_address: "3/7/6"
+  operation_mode_state_address: "3/7/7"
+  min_temp: 16
+  max_temp: 26
+
+- name: "Gaeste Bad Klima"
+  temperature_address: "3/7/15"
+  target_temperature_address: "3/7/14"
+  target_temperature_state_address: "3/7/14"
+  operation_mode_address: "3/7/20"
+  operation_mode_state_address: "3/7/21"
+  min_temp: 18
+  max_temp: 28
+
+- name: "Gaeste Wohnen Klima"
+  temperature_address: "3/7/29"
+  target_temperature_address: "3/7/28"
+  target_temperature_state_address: "3/7/28"
+  operation_mode_address: "3/7/34"
+  operation_mode_state_address: "3/7/35"
+  min_temp: 18
+  max_temp: 26
+
+# ============================================================
+# ERDGESCHOSS (Ground Floor) - Climate in 4/7/x
+# TODO: Verify addresses in ETS
+# ============================================================
+
+- name: "EG Garderobe Klima"
+  temperature_address: "4/7/1"
+  target_temperature_address: "4/7/0"
+  target_temperature_state_address: "4/7/0"
+  operation_mode_address: "4/7/6"
+  operation_mode_state_address: "4/7/7"
+  min_temp: 16
+  max_temp: 26
+
+- name: "EG Buero Klima"
+  temperature_address: "4/7/15"
+  target_temperature_address: "4/7/14"
+  target_temperature_state_address: "4/7/14"
+  operation_mode_address: "4/7/20"
+  operation_mode_state_address: "4/7/21"
+  min_temp: 18
+  max_temp: 26
+
+- name: "EG Kochen Essen Klima"
+  temperature_address: "4/7/29"
+  target_temperature_address: "4/7/28"
+  target_temperature_state_address: "4/7/28"
+  operation_mode_address: "4/7/34"
+  operation_mode_state_address: "4/7/35"
+  min_temp: 18
+  max_temp: 26
+
+- name: "EG Wohnen Klima"
+  temperature_address: "4/7/43"
+  target_temperature_address: "4/7/42"
+  target_temperature_state_address: "4/7/42"
+  operation_mode_address: "4/7/48"
+  operation_mode_state_address: "4/7/49"
+  min_temp: 18
+  max_temp: 26
+
+# ============================================================
+# OBERGESCHOSS (Upper Floor) - Climate in 5/7/x
+# TODO: Verify addresses in ETS
+# ============================================================
+
+- name: "OG Schlafen Klima"
+  temperature_address: "5/7/1"
+  target_temperature_address: "5/7/0"
+  target_temperature_state_address: "5/7/0"
+  operation_mode_address: "5/7/6"
+  operation_mode_state_address: "5/7/7"
+  min_temp: 16
+  max_temp: 26
+
+- name: "OG Buero Klima"
+  temperature_address: "5/7/15"
+  target_temperature_address: "5/7/14"
+  target_temperature_state_address: "5/7/14"
+  operation_mode_address: "5/7/20"
+  operation_mode_state_address: "5/7/21"
+  min_temp: 16
+  max_temp: 26
+
+- name: "OG WC Klima"
+  temperature_address: "5/7/29"
+  target_temperature_address: "5/7/28"
+  target_temperature_state_address: "5/7/28"
+  operation_mode_address: "5/7/34"
+  operation_mode_state_address: "5/7/35"
+  min_temp: 18
+  max_temp: 28
+
+- name: "OG Masterbad Klima"
+  temperature_address: "5/7/43"
+  target_temperature_address: "5/7/42"
+  target_temperature_state_address: "5/7/42"
+  operation_mode_address: "5/7/48"
+  operation_mode_state_address: "5/7/49"
+  min_temp: 18
+  max_temp: 28
+
+- name: "OG Masterschlafen Klima"
+  temperature_address: "5/7/57"
+  target_temperature_address: "5/7/56"
+  target_temperature_state_address: "5/7/56"
+  operation_mode_address: "5/7/62"
+  operation_mode_state_address: "5/7/63"
+  min_temp: 16
+  max_temp: 26

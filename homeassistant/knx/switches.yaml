@@ -1,0 +1,110 @@
+# KNX Switches Configuration - OLW23
+# Door openers, special functions, presence
+#
+# WARNING: Door openers send a 1-second pulse to unlock.
+# In HomeKit these appear as switches - they will auto-reset.
+# Consider using "input_button" entities instead for safety.
+
+# ============================================================
+# DOOR OPENERS (Türöffner) - 0/3/x
+# ============================================================
+
+- name: "Tuer Garagentor"
+  address: "0/3/100"
+  state_address: "0/3/100"
+
+- name: "Tuer Verbindungstuer"
+  address: "0/3/101"
+  state_address: "0/3/101"
+
+- name: "Tuer Haustuer"
+  address: "0/3/102"
+  state_address: "0/3/102"
+
+- name: "Tuer Gehtuer"
+  address: "0/3/103"
+  state_address: "0/3/103"
+
+- name: "Tuer Verbindungstuer Gaeste Wohnhaus"
+  address: "0/3/104"
+  state_address: "0/3/104"
+
+- name: "Tuer Gaeste Haustuer"
+  address: "0/3/105"
+  state_address: "0/3/105"
+
+- name: "Tuer Weinlager"
+  address: "0/3/106"
+  state_address: "0/3/106"
+
+# ============================================================
+# PRESENCE / AWAY MODE
+# ============================================================
+
+- name: "Anwesenheit"
+  address: "0/2/0"
+  state_address: "0/2/0"
+
+# ============================================================
+# HEATING / COOLING MODE
+# ============================================================
+
+- name: "Heizen Kuehlen Umschaltung"
+  address: "0/2/7"
+  state_address: "0/2/7"
+
+# ============================================================
+# SPECIAL FUNCTIONS
+# ============================================================
+
+- name: "Sauna Start Stop"
+  address: "0/3/190"
+  state_address: "0/3/191"
+
+- name: "Poolabdeckung AUF"
+  address: "0/3/80"
+  state_address: "0/3/80"
+
+- name: "Poolabdeckung ZU"
+  address: "0/3/81"
+  state_address: "0/3/81"
+
+- name: "Heizstrahler Pergola"
+  address: "0/3/60"
+  state_address: "0/3/61"
+
+- name: "Heizstrahler Masterterrasse OG"
+  address: "0/3/70"
+  state_address: "0/3/71"
+
+- name: "Heizstrahler Terrasse Pool EG"
+  address: "0/3/73"
+  state_address: "0/3/74"
+
+# ============================================================
+# CENTRAL LIGHTING SCENES
+# ============================================================
+
+- name: "Zentral AUS EG"
+  address: "0/0/10"
+  state_address: "0/0/10"
+
+- name: "Zentral AUS Garage"
+  address: "0/0/11"
+  state_address: "0/0/11"
+
+- name: "Zentral Alle 2UG"
+  address: "0/0/12"
+  state_address: "0/0/12"
+
+- name: "Zentral Alle 1UG"
+  address: "0/0/13"
+  state_address: "0/0/13"
+
+- name: "Zentral Alle EG"
+  address: "0/0/14"
+  state_address: "0/0/14"
+
+- name: "Zentral Alle OG"
+  address: "0/0/15"
+  state_address: "0/0/15"

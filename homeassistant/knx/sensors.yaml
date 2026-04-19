@@ -1,0 +1,60 @@
+# KNX Sensors Configuration - OLW23
+# Weather station, pool values, and room humidity sensors
+
+# ============================================================
+# WETTERSTATION (Weather Station) - 0/4/x
+# ============================================================
+
+- name: "Wetterstation Helligkeit"
+  address: "0/4/0"
+  type: "illuminance"
+  unit_of_measurement: "lux"
+
+- name: "Wetterstation Aussentemperatur"
+  address: "0/4/1"
+  type: "temperature"
+
+- name: "Wetterstation Windgeschwindigkeit"
+  address: "0/4/2"
+  type: "wind_speed"
+
+# ============================================================
+# POOL MONITORING - 0/2/x
+# ============================================================
+
+- name: "Innenpool Wassertemperatur"
+  address: "0/2/223"
+  type: "temperature"
+
+- name: "Innenpool pH"
+  address: "0/2/221"
+  type: "ph"
+
+- name: "Aussenpool Wassertemperatur"
+  address: "0/2/228"
+  type: "temperature"
+
+- name: "Whirlpool Wassertemperatur"
+  address: "0/2/233"
+  type: "temperature"
+
+# ============================================================
+# ROOM HUMIDITY SENSORS
+# Source: X/7/12 per room (Feuchtigkeit 2Byte, DPT 9.007)
+# ============================================================
+
+- name: "2UG Stiegenhaus Feuchtigkeit"
+  address: "1/7/12"
+  type: "humidity"
+
+- name: "2UG Abstellraum Feuchtigkeit"
+  address: "1/7/32"
+  type: "humidity"
+
+# ============================================================
+# ROOM TEMPERATURE READINGS (display only, no control)
+# ============================================================
+
+- name: "Aussentemperatur Technik"
+  address: "0/2/10"
+  type: "temperature"

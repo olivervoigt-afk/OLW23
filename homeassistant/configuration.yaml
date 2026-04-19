@@ -1,0 +1,65 @@
+# Home Assistant Configuration - OLW23
+# KNX + HomeKit/Siri Integration
+
+homeassistant:
+  name: OLW23
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  unit_system: metric
+  time_zone: Europe/Vienna
+  currency: EUR
+
+# Enables the frontend
+frontend:
+
+# HTTP
+http:
+
+# Auto-discovery
+discovery:
+
+# History, logbook, recorder
+history:
+logbook:
+recorder:
+
+# -------------------------------------------------------
+# KNX Integration
+# The connection to the KNX IP Interface is configured
+# via the Home Assistant UI:
+#   Settings > Integrations > Add Integration > KNX
+#   Choose "Tunneling" and enter the IP address of your
+#   KNX IP Interface (not the Raspberry Pi IP).
+# -------------------------------------------------------
+knx:
+  # Lighting
+  light: !include knx/lights.yaml
+
+  # Blinds / Covers (Jalousien & Vorhänge)
+  cover: !include knx/covers.yaml
+
+  # Climate / Heating / Humidity
+  climate: !include knx/climate.yaml
+
+  # Sensors (weather station, temperatures, humidity)
+  sensor: !include knx/sensors.yaml
+
+  # Switches (doors, special functions)
+  switch: !include knx/switches.yaml
+
+# -------------------------------------------------------
+# HomeKit Bridge
+# Exposes Home Assistant entities to Apple HomeKit / Siri
+# -------------------------------------------------------
+homekit:
+  - name: OLW23 Bridge
+    port: 21063
+    filter:
+      include_domains:
+        - light
+        - cover
+        - climate
+        - switch
+      exclude_entity_globs:
+        - sensor.*_rm          # Exclude raw KNX feedback sensors
+        - switch.*_stoerung    # Exclude fault/error switches
